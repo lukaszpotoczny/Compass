@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/textDest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="16dp"
+        android:text="Destination:" />
+
+    <RelativeLayout
+        android:id="@+id/popupLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/textDest">
+
+        <TextView
+            android:id="@+id/textLat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="16dp"
+            android:textSize="22sp"
+            android:text="Latitude:" />
+
+        <TextView
+            android:id="@+id/textLng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textLat"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="16dp"
+            android:textSize="22sp"
+            android:text="Longitude:" />
+
+        <EditText
+            android:id="@+id/editLat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textLat"
+            android:ems="10"
+            android:layout_marginTop="21dp"
+            android:inputType="numberSigned|numberDecimal" />
+
+        <EditText
+            android:id="@+id/editLng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editLat"
+            android:layout_toRightOf="@+id/textLng"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:inputType="numberSigned|numberDecimal" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/popupLayout"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:paddingBottom="16dp"
+        >
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editLng"
+            android:layout_marginRight="64dp"
+            android:padding="16dp"
+            android:textSize="17sp"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="#fff"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/buttonConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editLng"
+            android:layout_toRightOf="@id/buttonCancel"
+            android:padding="16dp"
+            android:textSize="17sp"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="#fff"
+            android:text="confirm" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
